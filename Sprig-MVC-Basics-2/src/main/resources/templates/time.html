@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Time Page</title>
+   <link rel="stylesheet" th:href="@{/css/style.css}">
+</head>
+<body>
+
+<h1>Current Time Information</h1>
+
+<h2>Time: <span th:text="${time}"></span></h2>
+<h2>Date: <span th:text="${date}"></span></h2>
+<h2>Month: <span th:text="${month}"></span></h2>
+
+</body>
+</html>
