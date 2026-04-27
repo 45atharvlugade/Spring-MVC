@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html  lang="en" xmlns:th="https://www.thymeleaf.org">
+<head >
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Invoice</title>
+</head>
+<body>
+
+<h1>Model Attribute</h1>
+<h2>Customer Data : <span th:text="${custData}"></span></h2>
+
+<!-- get the specific value of the Customer -->
+<h2>Customer Id : <span th:text="${custData.cno}"></span></h2>
+</body>
+</html>

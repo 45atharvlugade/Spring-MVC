@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html  lang="en" xmlns:th="https://www.thymeleaf.org">
+<head >
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>student-registration-form</title>
+</head>
+<body>
+<h1>Student Registration Page </h1>
+<br>
+<form action="register" method="POST">
+<table border=5px>
+<tr>
+<td>Student Id : </td> 
+<td><input type="text" name="studentId"></td>
+</tr> 
+<tr>
+<td>Student Name : </td> 
+<td><input type="text" name="studentName"></td> 
+</tr>
+<tr>
+<td>Student Address :  </td> 
+<td><input type="text" name="studentAddress"></td> 
+</tr>
+<tr>
+<td>Student Percentage </td> 
+<td><input type="text" name="percentage"></td> 
+</tr>
+</table>
+<input type="submit" value="Register">
+</form>
+</body>
+</html>
