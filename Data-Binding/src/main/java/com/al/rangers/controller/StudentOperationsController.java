@@ -47,4 +47,9 @@ public class StudentOperationsController {
 		 map.put("resultMessage", result);
 		 return "results";
 	  }
+	  
+	   @GetMapping("/result")
+	   public void getResult() {
+		   
+	   }
 }

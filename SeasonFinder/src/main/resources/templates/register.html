@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html  lang="en" xmlns:th="https://www.thymeleaf.org">
+<head >
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register</title>
+</head>
+<body>
+
+
+<h1>User Registration</h1>
+
+<div class="div outer">
+<form th:action="@{/register}" th:object="${user}" method="post">
+    <h1>Id : <input type="text" th:field="*{userId}"></h1>
+    <h1>Name : <input type="text" th:field="*{userName}" ></h1>
+    <h1>Email :<input type="email" th:field="*{userEmail}"></h1>
+    <h1>Mobile : <input type="Number" th:field="*{mobileNumber}"></h1>
+    <h1><input type="submit" >register</h1>
+</form>
+</div>
+</body>
+</html>

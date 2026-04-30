@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title th:text="${title}">My Page</title>
+
+    <!-- Link CSS from static/css -->
+     <link rel="stylesheet" th:href="@{/css/registerCollage.css}">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <!-- <link rel="stylesheet" href="registerCollage.css"> -->
+</head>
+<body>
+
+    <section class="contianer">
+          <div class="upper div">
+<h1>Register</h1>
+<i class="fa-solid fa-user"></i>
+
+<nav>
+    <p th:if="${success}" class="success msg" th:text="${success}"></p>
+    <p th:if="${error}" class="error msg" th:text="${error}"></p>
+</nav>
+
+          </div>
+
+          <div class="lower div">
+
+            <form  th:action="@{/collage/registerCollage}" th:object="${collage}" method="post">
+                   <div class="formgroup name"><label>Name </label>  <input th:type="text" th:field="*{name}"></div>
+                   <div class="formgroup address"><label >Address</label>  <input th:type="text" th:field="*{address}"></div>
+                  <div class="formgroup email"><label > Email </label> <input th:type="email" th:field="*{email}"></div>
+                   <div class="formgroup password"><label>password</label> <input th:type="text" th:field="*{password}"></div>
+                  <input type="submit" value="register">
+            </form>
+
+          </div>
+
+    </section>
+
+</body>
+</html>

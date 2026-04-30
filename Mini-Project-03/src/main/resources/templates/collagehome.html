@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title th:text="${title}">My Page</title>
+
+    <!-- Link CSS from static/css -->
+     <link rel="stylesheet" th:href="@{/css/collagehome.css}">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <!-- <link rel="stylesheet" href="home.css"> -->
+</head>
+<body>
+ <nav> 
+   <ul>
+    <li><a th:href="@{/collage/}"><i class="fa-solid fa-building-columns"></i></a></li>
+    <li><a th:href="@{/collage/registerCollage}"><i class="fa-solid fa-plus"></i></a></li>
+    <li><a th:href="@{/collage/dashboard}"><i class="fa-brands fa-dashcube"></i></a></li>
+    <li><a th:href="@{/collage/contactus}"><i class="fa-thin fa-address-book"></i></a></li>
+   </ul>
+ </nav>
+
+ <div id="downnav">
+    <div class="mainDiv1">
+      <div class="content c1">
+        <p>This is The Mit ADt University</p>
+      </div>
+      <div class="content c2">NAAC grad A+</div>
+      <div class="content c3">Located in Pune</div>
+      <div class="content c4"><h2>Best</h2>
+      offers Serverl Content like<br>Compter Science Engg<br>SMechanical Engg</div>
+      <div class="content c5">More About Us</div>
+    </div>
+ </div>
+
+
+</body>
+</html>

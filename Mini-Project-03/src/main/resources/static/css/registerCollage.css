@@ -1,0 +1,50 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+.contianer{
+    background-color: rgb(226, 226, 226);
+   
+    height: 80vh;
+    width: 100vw;
+    background-color: rgb(163, 160, 160);
+}
+
+.upper{
+    display: grid;
+    grid-template-columns: auto auto;
+    font-size: 30px; 
+    box-sizing: border-box;   
+    color: rgb(66, 65, 64);
+}
+.upper>i{
+    padding-top:20px ;
+    justify-self: end;
+    padding-right: 40px;
+}
+nav{
+    box-sizing: border-box;
+    margin: 2vh;
+    padding: 1vh;
+    height: 40px;
+    width: 400px;
+    background-color: gray;
+}
+
+.formgroup input{
+    margin: 10px;
+    width: 80%;
+    padding: 10px;
+}
+
+.formgroup{
+    display: grid;
+    grid-template-columns: 500px 1fr;
+    align-items: center;
+}
+
+input[type="submit"]{
+    padding: 10px;
+    margin: 10px;
+    width: 60%;
+}

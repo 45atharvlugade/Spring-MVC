@@ -1,0 +1,38 @@
+*{
+    padding: 0px;
+    margin: 0px;
+}
+body{
+    height: 100vh;
+    width: 100vw;
+    background-color: rgb(215, 225, 225);
+}
+table{
+    width:100%;
+    table-layout: fixed;
+    border-collapse: collapse;
+
+}
+
+th,td{
+    border:1px solid black;
+    text-align: center;
+    padding: 12px;
+}
+
+.id-col{
+    width: 80px;
+}
+.name-col{
+    width: 140px;
+}
+.address-col{
+    width: 200px;
+}
+.fee-col{
+    width:100px;
+}
+.category-col{
+    width: 100px;
+}
+
