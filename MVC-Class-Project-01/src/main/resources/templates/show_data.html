@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title th:text="${title}">My Page</title>
+
+    <!-- Link CSS from static/css -->
+     <link rel="stylesheet" th:href="@{/css/show_data.css}">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <!-- <link rel="stylesheet" href="show_data.css"> -->
+</head>
+<body>
+
+<nav >
+<p th:if="${success}" th:text="${success}" class="success-msg"></p>
+<p th:if="${error}" th:text="${error}" class="error-msg"></p>
+</nav>
+
+<form th:action="@{/actor/register}" th:object="${actor}" method="post"> 
+
+    <input th:type="text" th:field="*{actorName}" placeholder="Enter Your Name "><br>
+    <input th:type="text" th:field="*{address}" placeholder="Enter Your Address "><br>
+    <input th:type="text" th:field="*{fees}" placeholder="Enter Your fees "><br>
+    <input th:type="text" th:field="*{category}" placeholder="Enter Ypur Category "><br>
+    <input type="submit" value="Register"><br>
+</form>
+
+
+<h2>All Actors List</h2>
+
+<table border="2">
+<tr>
+    <th>Id</th><th>Name</th><th>address</th><th>fee</th><th>category</th><th>delete</th>
+</tr>
+<tr th:each="actor : ${actorList}">
+    <td th:text="${actor.actorId}"></td>
+    <td th:text="${actor.actorName}"></td>
+    <td th:text="${actor.address}"></td>
+    <td th:text="${actor.fees}"></td>
+    <td th:text="${actor.category}"></td>
+   <td><form th:action="@{/actor/delete}" method="post">
+          <input type="hidden" name="id" th:value="${actor.actorId}">
+          <button type="submit" >
+            <i class="fa-solid fa-delete-left"></i>
+          </button>  
+    </form></td>
+</tr>
+
+</table>
+
+</body>
+</html>

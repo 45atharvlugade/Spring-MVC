@@ -8,4 +8,8 @@ public interface IActorService {
 
 	public List<Actor> getAllActors();
 	
+	public String registerActor(Actor actor);
+	
+	public String deleteActorById(int id);
+	
 }

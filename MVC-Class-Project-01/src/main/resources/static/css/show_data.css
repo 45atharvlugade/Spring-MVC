@@ -1,0 +1,23 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+
+table{
+    margin-top:20px ;
+    width: 100%;
+    padding: auto auto;
+    table-layout: fixed;
+    border-collapse: collapse;
+    
+}
+
+h2{
+    margin-top: 20px;
+    justify-self: center;
+}
+
+tr,td{
+text-align: center;
+border: 2px solid black;
+}

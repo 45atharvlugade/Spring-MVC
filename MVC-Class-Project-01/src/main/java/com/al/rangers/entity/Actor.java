@@ -67,7 +67,7 @@ public class Actor {
 	private String updatedBy;
 	
 	
-	private Actor() {
+	public Actor() {
 		System.out.println("Actor.Actor()");
 		
 	}
