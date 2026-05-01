@@ -56,4 +56,50 @@ public class CollageManagementServie implements ICollageManagementServie {
 		
 	}
 
+	@Override
+	public String updateCollage(Collage collage) {
+		Optional<Collage> opt=collageRepo.findById(collage.getCollageId());
+		String msg = null;
+		if(opt.isPresent()) {
+			Collage clg=opt.get();
+			if(
+					(collage.getEmail()!=null && !collage.getEmail().isEmpty())
+					||   
+					(collage.getAddress()!=null && !collage.getAddress().isEmpty())
+					||
+					(collage.getPassword()!=null && !collage.getPassword().isEmpty())	
+					||
+					(collage.getName()!=null && !collage.getName().isEmpty())
+					) {
+				
+				clg.setEmail(collage.getEmail());
+				clg.setAddress(collage.getAddress());
+				clg.setName(collage.getName());
+				
+				collageRepo.save(clg);
+				
+				msg="Collage Details Updated Successfully";
+			}
+		}else {
+			
+			msg="No Collage Found ";
+		}
+		return msg;
+	}
+
+	@Override
+	public Collage loginCollage(String email) {
+
+
+	   
+	  Optional<Collage> opt= collageRepo.findByEmail(email);
+	  if(opt.isPresent()) {
+//		  sb.append("Collage Email Id Found verying the password");
+	   return opt.get();	  
+	  }
+	  else {
+		  return null;                  
+	  }
+	}
+
 }

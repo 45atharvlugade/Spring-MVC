@@ -14,6 +14,7 @@ import jakarta.persistence.Table;
 import jakarta.persistence.Version;
 import lombok.EqualsAndHashCode;
 import lombok.Getter;
+import lombok.NoArgsConstructor;
 import lombok.NonNull;
 import lombok.RequiredArgsConstructor;
 import lombok.Setter;
@@ -26,6 +27,7 @@ import lombok.ToString;
 @ToString
 @EqualsAndHashCode
 @RequiredArgsConstructor
+@NoArgsConstructor
 public class Actor {
 
 	@Id
@@ -66,9 +68,5 @@ public class Actor {
 	@Column(length = 30,insertable = false)
 	private String updatedBy;
 	
-	
-	public Actor() {
-		System.out.println("Actor.Actor()");
-		
-	}
+
 }

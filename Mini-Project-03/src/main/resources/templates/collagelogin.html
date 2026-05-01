@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title th:text="${title}">My Page</title>
+
+    <!-- Link CSS from static/css -->
+     <link rel="stylesheet" th:href="@{/css/collagelogin.css}">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <link rel="stylesheet" href="collageLogin.css">
+</head>
+<body>
+
+
+    <section class="container">
+
+    <section class="form-upper">
+            <h1> Wel-Come Back</h1>
+    </section>
+
+    <section class="login-form">
+        <form th:action="@{/collage/login}" th:object="${collage}" method="post">
+          <div class="label-email-page-email">
+             <label class="label-email"> email</label >
+             <input class="page-email" th:type="email" th:field="*{email}">
+          </div>
+             <label class="label-password"> password</label >
+            <input class="page-password" th:type="password" th:field="*{password}">
+            <input type="submit" value="Login">
+        </form>
+    </section>
+
+   <footer>
+    <p> Not Registered ? </p>
+    <a th:href="@{collage/registerCollage}">Register</a> 
+   </footer>
+</section>
+   
+</body>
+</html>

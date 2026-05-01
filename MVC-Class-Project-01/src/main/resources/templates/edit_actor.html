@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title th:text="${title}">My Page</title>
+
+    <!-- Link CSS from static/css -->
+     <link rel="stylesheet" th:href="@{/css/edit_actor.css}">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <link rel="stylesheet" href="edit_actor.css">
+</head>
+<body>
+   
+
+<section class="container">
+     <header>
+    Edit Page
+    </header>
+   <form th:action="@{/actor/edit}" th:object="${actor2}" method="post">
+        <input type="hidden" th:field="*{actorId}">
+        <div class="name-label-input-name">
+            <label class="name-label"> Name </label>
+            <input class="name-input" type="text" th:field="*{actorName}">
+        </div>
+         <div class="address-label-input-address">
+            <label class="address-label"> Address</label>
+            <input class="address-input" type="text" th:field="*{address}">
+        </div>
+         <div class="fees-label-input-fees">
+            <label class="fees-label"> fees </label>
+            <input class="fees-input" type="text" th:field="*{fees}">
+        </div>
+         <div class="category-label-input-category">
+            <label class="category-label"> category </label>
+            <input class="category-input" type="text" th:field="*{category}">
+        </div>
+
+        <div class="form-buttons">
+            <div class="submitbutton">
+                <input type="submit" value="Edit">
+            </div>
+            
+            <div class="resetbutton">
+                <input type="reset">
+            </div>
+        </div>
+    </form>
+</section>
+
+</body>
+</html>
